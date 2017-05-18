@@ -51,14 +51,17 @@ makeConstructMatrix <- function(net, a) {
   if (!all(rounded.rowsums %in% c(0, 1)))
     warning("C matrix values do not sum to 0 or 1")
   
-  # Create diagonal matrix A and identity matrix I
-  I <- diag(nrow(C))
-  A <- I * a
-  
   # Fix isolated dyads -- definitionally (my defn.) assigned to weight the last
   # observation at 1
   isos <- which(rounded.rowsums == 0)
-  A[isos, isos] <- 0
+  if (length(a) == 1) {
+    a <- rep(a, times = nrow(C))
+  }
+  a[isos] <- 1
+  
+  # Create diagonal matrix A and identity matrix I
+  I <- diag(nrow(C))
+  A <- diag(a)
   
   # Convert to a weight matrix and return
   return(A %*% C + I - A)
