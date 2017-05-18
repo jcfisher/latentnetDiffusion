@@ -1,0 +1,20 @@
+Package: latentnetDiffusion
+Type: Package
+Title: Runs latent space diffusion model (ALPHA TESTING VERSION)
+Version: 0.5
+Date: 2017-02-15
+Author: Jake Fisher
+Maintainer: Jake Fisher <jcf26@duke.edu>
+Description: Runs the latent space diffusion model described in Fisher (2015).
+    Untested, alpha release. Use with caution.
+Imports:
+  statnet,
+  latentnet,
+  expm,
+  Matrix
+Suggests:
+  tidyr,
+  dplyr,
+  readr
+License: GPL-3
+RoxygenNote: 6.0.1
