@@ -1,7 +1,7 @@
 Package: latentnetDiffusion
 Type: Package
 Title: Runs latent space diffusion model (ALPHA TESTING VERSION)
-Version: 0.5
+Version: 0.6
 Date: 2017-02-15
 Author: Jake Fisher
 Maintainer: Jake Fisher <jcf26@duke.edu>
