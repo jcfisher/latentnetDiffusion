@@ -57,7 +57,7 @@ makeConstructMatrix <- function(net, a) {
   if (length(a) == 1) {
     a <- rep(a, times = nrow(C))
   }
-  a[isos] <- 1
+  a[isos] <- 0
   
   # Create diagonal matrix A and identity matrix I
   I <- diag(nrow(C))
